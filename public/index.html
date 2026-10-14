@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'" />
+  <title>OpenTello</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="join-screen">
+    <div class="join-box">
+      <h1>OpenTello</h1>
+      <p id="join-hint">Private, end-to-end encrypted chat. Nothing is saved.</p>
+      <input type="text" id="name-input" placeholder="Your name" maxlength="20" autocomplete="off" />
+      <button id="join-btn">Create private room</button>
+      <p class="fine">Messages are encrypted in your browser with a key that stays in the room link. The server only relays unreadable data for up to 60 seconds and never sees names or text.</p>
+    </div>
+  </div>
+
+  <div id="chat-screen" class="hidden">
+    <header>
+      <h1>OpenTello</h1>
+      <button id="copy-btn" class="link-btn" title="Copy the invite link">Copy invite link</button>
+      <span id="status">Connecting…</span>
+    </header>
+
+    <main id="messages"></main>
+
+    <footer>
+      <input type="text" id="msg-input" placeholder="Type a message…" maxlength="500" autocomplete="off" />
+      <button id="send-btn">Send</button>
+    </footer>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+{
+  "version": "8",
+  "dialect": "postgres",
+  "id": "384c85be-fc81-436c-8371-5837dbf30fa0",
+  "prevIds": [
+    "e3007ae6-b07a-4ab3-8c78-9258168e8c3a"
+  ],
+  "ddl": [
+    {
+      "isRlsEnabled": false,
+      "name": "relay",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "relay"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "room",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "relay"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "data",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "relay"
+    },
+    {
+      "type": "timestamp with time zone",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "relay"
+    },
+    {
+      "nameExplicit": true,
+      "columns": [
+        {
+          "value": "room",
+          "isExpression": false,
+          "asc": true,
+          "nullsFirst": false,
+          "opclass": null
+        },
+        {
+          "value": "id",
+          "isExpression": false,
+          "asc": true,
+          "nullsFirst": false,
+          "opclass": null
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "with": "",
+      "method": "btree",
+      "concurrently": false,
+      "name": "relay_room_id_idx",
+      "entityType": "indexes",
+      "schema": "public",
+      "table": "relay"
+    },
+    {
+      "nameExplicit": true,
+      "columns": [
+        {
+          "value": "created_at",
+          "isExpression": false,
+          "asc": true,
+          "nullsFirst": false,
+          "opclass": null
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "with": "",
+      "method": "btree",
+      "concurrently": false,
+      "name": "relay_created_at_idx",
+      "entityType": "indexes",
+      "schema": "public",
+      "table": "relay"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "relay_pkey",
+      "schema": "public",
+      "table": "relay",
+      "entityType": "pks"
+    }
+  ],
+  "renames": []
+}
